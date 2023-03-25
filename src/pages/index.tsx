@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import Head from "next/head";
+import { themeChange } from "theme-change";
 
 export default function Home() {
+  useEffect(() => {
+    themeChange(false);
+  }, []);
+
   return (
     <>
       <Head>
@@ -11,6 +17,7 @@ export default function Home() {
       </Head>
       <main>
         <div>hello world</div>
+        <button className="btn btn-primary">button</button>
       </main>
     </>
   );
